@@ -11,8 +11,19 @@
 <h1>Notes!</h1>
 <ul>
 	{% for element in notelist %}
-	<a href="{% url 'detailed' element.id %}"><li> {{ element.title }} </li></a>
- 
+	<div class="card" style="width: 500px" >
+  <div class="card-body">
+  	<a class = "card-link" href="{% url 'detailed' element.id %}"><li> {{ element.title }} </li></a>
+ 	</div>
+ </div>
 	{% endfor %}
 	</ul>
+
+	<div class="card" style="width: 500px" >
+  <div class="card-body">
+  	<a class = "card-link" href="{% url 'addnotes' %}">Add a Note!</a>
+ 	</div>
+ </div>
+
+
 {% endblock content %}

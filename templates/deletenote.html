@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title  %} Delete Note? {% endblock title  %} 
+
+{% block content %} 
+	
+	<form action="" method="post"> {% csrf_token %}
+	
+	<p> Do you want to delete <strong>{{ note.title }}</strong> ?</p>
+	<input class="btn btn-danger ml-2" type="submit" value="Confirm"/>
+	
+	</form>
+<a class="btn btn-warning ml-2" href="{% url 'editnotes' note.id %}">Edit insted?</a>
+
+
+
+
+
+
+{% endblock content %}

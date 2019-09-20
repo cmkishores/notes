@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title  %} Notes {% endblock title %}
 
@@ -8,11 +9,13 @@
    <h1>{{ note.title }}</h1>
 
 	<p> {{ note.detail }} </p>
-
+	<a href="{% url 'editnotes' note.id %}" class="card-link">Edit Note</a>
+	<a href="{% url 'deletenotes' note.id %}" class="card-link">Delete Note</a>
   </div>
+  
 </div>
 
-
+<a href="{% url 'notes' %}" class="card-link">Go back</a>
 
 
 {% endblock content %}
