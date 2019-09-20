@@ -10,7 +10,7 @@ class CustomUserAdmin(UserAdmin):
 	list_display = ['email','username', 'gender','is_staff',]
 	fieldsets = (
 
-		(None,{'fields':('email','password','gender',)}),
+		(None,{'fields':('email','password','username','gender',)}),
 		('Permissions',{'fields':('is_staff','is_active')}),
 		)
 
@@ -18,8 +18,8 @@ class CustomUserAdmin(UserAdmin):
 
 		(None,{
 			'classes':('wide',),
-			'fields':('email','password1','password2','is_staff','is_active')
-			})
+			'fields':('email','username','password1','password2','is_staff','is_active')
+			}),
 
 		)
 admin.site.register(CustomUser,CustomUserAdmin)
