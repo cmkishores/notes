@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title  %} Notes {% endblock title %}
+
+{% block content %} 
+<div class="card" style="width: 500px" >
+  <div class="card-body">
+   <h1>{{ note.title }}</h1>
+
+	<p> {{ note.detail }} </p>
+
+  </div>
+</div>
+
+
+
+
+{% endblock content %}
